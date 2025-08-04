@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAART-CHAS Group</title>
-    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+    <meta name="google-site-verification" content="google387f49e555945522.html" />
+    <!-- Tailwind CSS via CDN for easy styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons via CDN for modern, clean icons -->
     <script src="https://cdn.jsdelivr.net/npm/lucide-preact@latest"></script>
     <style>
         @import url('https://rsms.me/inter/inter.css');
@@ -53,7 +55,7 @@
         }
         /* General content styling for readability */
         .prose ul li {
-            margin-bottom: 0.5rem;
+          margin-bottom: 0.5rem;
         }
         /* Unique Hero Sections for each page with real images */
         #media-page .hero {
@@ -110,13 +112,19 @@
 </head>
 <body class="bg-gray-100 text-gray-900 antialiased min-h-screen flex flex-col">
 
+    <!-- Navigation Bar -->
     <nav class="p-4 bg-white shadow-lg fixed w-full z-20 transition-all duration-300 rounded-b-xl">
         <div class="container mx-auto flex justify-between items-center px-4 md:px-6 lg:px-8">
+            <!-- Logo and brand name -->
             <div class="flex items-center space-x-2">
+                <!-- IMPORTANT: The 'src' attribute now uses a relative path. -->
+                <!-- Please make sure your image file is named "WhatsApp Image 2025-08-01 at 00.26.47.jpeg" and is in the same folder as this index.html file. -->
+                <!-- The 'onerror' attribute provides a fallback if the image fails to load. -->
                 <img src="./WhatsApp Image 2025-08-01 at 00.26.47.jpeg" alt="DAART-CHAS Group Logo" class="w-10 h-10 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/40x40/4a74b3/ffffff?text=DC';">
                 <a href="javascript:void(0)" class="text-2xl font-bold text-gray-800" onclick="navigateTo('home')">DAART-CHAS</a>
             </div>
 
+            <!-- Desktop navigation links -->
             <div class="hidden md:flex space-x-6 lg:space-x-8">
                 <a href="javascript:void(0)" class="text-gray-600 hover:text-red-500 transition duration-300 font-medium" onclick="navigateTo('home')">Home</a>
                 <a href="javascript:void(0)" class="text-gray-600 hover:text-red-500 transition duration-300 font-medium" onclick="navigateTo('media')">Media</a>
@@ -126,6 +134,7 @@
                 <a href="javascript:void(0)" class="text-gray-600 hover:text-red-500 transition duration-300 font-medium" onclick="navigateTo('solar')">Solar Energy</a>
             </div>
 
+            <!-- Mobile menu button -->
             <div class="md:hidden">
                 <button id="mobile-menu-toggle" class="text-gray-600 hover:text-red-500 focus:outline-none focus:text-red-500 transition duration-300" aria-label="Toggle mobile menu">
                     <i data-lucide="menu" class="w-7 h-7" id="menu-icon"></i>
@@ -134,6 +143,7 @@
             </div>
         </div>
 
+        <!-- Mobile menu dropdown -->
         <div id="mobile-menu" class="md:hidden hidden mt-4 bg-white rounded-b-xl shadow-lg p-4 transition-all duration-300">
             <a href="javascript:void(0)" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded-lg transition duration-300 font-medium" onclick="navigateTo('home'); document.getElementById('mobile-menu').classList.add('hidden');">Home</a>
             <a href="javascript:void(0)" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded-lg transition duration-300 font-medium" onclick="navigateTo('media'); document.getElementById('mobile-menu').classList.add('hidden');">Media</a>
@@ -144,8 +154,11 @@
         </div>
     </nav>
     
+    <!-- Main content area -->
     <main class="flex-grow">
+        <!-- Home Page Content -->
         <div id="home-page" class="page-content">
+            <!-- Hero Section -->
             <header class="hero-section">
                 <div class="container mx-auto px-4 md:px-6 lg:px-8">
                     <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4 leading-tight tracking-wide animate-fade-in-down">DAART-CHAS INTEGRATED GROUP</h1>
@@ -187,6 +200,7 @@
                 <div class="container mx-auto text-center">
                     <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">Our Companies</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+                        <!-- DAART-CHAS MEDIA - Unique Colorful Gradient -->
                         <button class="group p-8 rounded-xl shadow-lg company-button bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50" onclick="navigateTo('media')">
                             <div class="flex flex-col items-center">
                                 <div class="flex items-center justify-center w-20 h-20 rounded-full mb-6 icon-container">
@@ -195,6 +209,7 @@
                                 <h3 class="text-xl font-bold text-white mb-2 transition duration-300">DAART-CHAS MEDIA</h3>
                             </div>
                         </button>
+                        <!-- DAART-CHAS FOODS - Unique Colorful Gradient -->
                         <button class="group p-8 rounded-xl shadow-lg company-button bg-gradient-to-r from-orange-400 to-red-500 hover:from-orange-500 hover:to-red-600 focus:outline-none focus:ring-4 focus:ring-orange-500 focus:ring-opacity-50" onclick="navigateTo('food')">
                             <div class="flex flex-col items-center">
                                 <div class="flex items-center justify-center w-20 h-20 rounded-full mb-6 icon-container">
@@ -203,6 +218,7 @@
                                 <h3 class="text-xl font-bold text-white mb-2 transition duration-300">DAART-CHAS FOODS, HOTELS & HOME MANAGEMENT</h3>
                             </div>
                         </button>
+                        <!-- DAART-CHAS FURNITURE - Unique Colorful Gradient -->
                         <button class="group p-8 rounded-xl shadow-lg company-button bg-gradient-to-r from-green-500 to-yellow-600 hover:from-green-600 hover:to-yellow-700 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50" onclick="navigateTo('furniture')">
                             <div class="flex flex-col items-center">
                                 <div class="flex items-center justify-center w-20 h-20 rounded-full mb-6 icon-container">
@@ -211,6 +227,7 @@
                                 <h3 class="text-xl font-bold text-white mb-2 transition duration-300">DAART-CHAS FURNITURE, INTERIOR AND FINISHINGS</h3>
                             </div>
                         </button>
+                        <!-- DAART-CHAS CLOTHES - Unique Colorful Gradient -->
                         <button class="group p-8 rounded-xl shadow-lg company-button bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 focus:outline-none focus:ring-4 focus:ring-pink-500 focus:ring-opacity-50" onclick="navigateTo('clothes')">
                             <div class="flex flex-col items-center">
                                 <div class="flex items-center justify-center w-20 h-20 rounded-full mb-6 icon-container">
@@ -219,6 +236,7 @@
                                 <h3 class="text-xl font-bold text-white mb-2 transition duration-300">DAART-CHAS CLOTHES</h3>
                             </div>
                         </button>
+                        <!-- DAART-CHAS SOLAR ENERGY - Unique Colorful Gradient -->
                         <button class="group p-8 rounded-xl shadow-lg company-button bg-gradient-to-r from-yellow-400 to-green-500 hover:from-yellow-500 hover:to-green-600 focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50" onclick="navigateTo('solar')">
                             <div class="flex flex-col items-center">
                                 <div class="flex items-center justify-center w-20 h-20 rounded-full mb-6 icon-container">
@@ -231,7 +249,9 @@
                 </div>
             </section>
         </div>
-<div id="media-page" class="page-content bg-gray-50">
+    
+        <!-- DAART-CHAS MEDIA Page -->
+        <div id="media-page" class="page-content bg-gray-50">
             <header class="hero-section-page hero">
                 <div class="container mx-auto px-4">
                     <h1 class="text-5xl font-extrabold mb-4 animate-fade-in-down">DAART-CHAS MEDIA</h1>
@@ -240,7 +260,6 @@
                     </p>
                 </div>
             </header>
-
             <section class="container mx-auto py-16 px-4 md:px-8">
                 <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl transition-all duration-300 ease-in-out">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -270,6 +289,7 @@
             </section>
         </div>
     
+        <!-- DAART-CHAS FOOD Page -->
         <div id="food-page" class="page-content bg-gray-50">
             <header class="hero-section-page hero">
                 <div class="container mx-auto px-4">
@@ -317,6 +337,7 @@
             </section>
         </div>
     
+        <!-- DAART-CHAS FURNITURE Page -->
         <div id="furniture-page" class="page-content bg-gray-50">
             <header class="hero-section-page hero">
                 <div class="container mx-auto px-4">
@@ -370,6 +391,7 @@
             </section>
         </div>
 
+        <!-- DAART-CHAS CLOTHES Page -->
         <div id="clothes-page" class="page-content bg-gray-50">
             <header class="hero-section-page hero">
                 <div class="container mx-auto px-4">
@@ -401,6 +423,7 @@
             </section>
         </div>
 
+        <!-- DAART-CHAS SOLAR ENERGY Page -->
         <div id="solar-page" class="page-content bg-gray-50">
             <header class="hero-section-page hero">
                 <div class="container mx-auto px-4">
@@ -436,6 +459,7 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12 mt-auto">
         <div class="container mx-auto px-4 md:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-8 md:space-y-0">
@@ -470,6 +494,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript to handle page navigation and mobile menu with History API -->
     <script>
         // A function to get the current page from the URL query parameter
         function getPageFromUrl() {
@@ -528,3 +553,5 @@
     </script>
 </body>
 </html>
+
+
